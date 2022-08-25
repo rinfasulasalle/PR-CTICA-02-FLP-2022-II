@@ -1,0 +1,158 @@
+\section{Investigacion (FORTRAN)}
+
+Fortran es el lenguaje pionero de programación que está orientado y se adapta a las aplicaciones numéricas y la computación científica.
+
+\vspace{0.2in}
+
+Apartir de Fortran se crearon varios lenguajes que hoy en dia forman la programacion moderna. A través de este se han puesto en práctica conceptos como la computación científica, o la complicación de código, entre otros.
+
+\subsection{Historia}
+
+El desarrollo del lenguaje Fortran (Formula Translating System) comenzo en 1955, su principal desarrollador fue John Backus en IBM (International Business Machines). En 1957 se libero finalmente a los usuarios de de programacion y/o computadoras.
+
+\vspace{0.2in}
+
+Cabe aclarar que el primer lenguaje desarrollado no fue FortrAN sino Laning Y Zierler en 1952 que contaba desde sus inicios con un compilador algebraico, pero este no tuvo tan buena popularidad como Fortres que atrajo a mas usuarios.
+
+\vspace{0.2in}
+
+Lo que resulto mas atractivo de Fortran al momento de su salida fue su eficiencia que muchos creian que no se podria trabajar codigos o crear en este lenguaje ya que en ese entonces siempre se tenia que escribir en lenguaje maquina desde el principio. Aparte de ese factor tambien resalto la excelente documentacion que se le atribuia y el avanzado diseño de optimizacion a los codigos.
+
+\vspace{0.2in}
+
+Atravez de los siguientes años se fue optimizando Fortran, lanzanado en 1958 Fortran II que optimizaba un poco mas la interfaz con el usuario agregando la instruccion "if - aritmetica" con tres direcciones, ese mismo año se saco Fortran III pero esta version no fue muy bien recibida ya que dependia mucho de IBM 704. 
+
+\vspace{0.2in}
+
+En 1962 lanzaron Fortran IV que fue la optimizacion preferida de los usuarios por una mayor diversidad al momento de elegir entre las opciones de programacion ya que ahora contaba con la instruccion de "if - logico".
+
+\vspace{0.2in}
+
+Las ultimas versiones son las que aportaron mas y ayudaron a complementar Fortran en 1966 salio Fortran 66 que fue la primera version estandarizada.
+
+\vspace{0.2in}
+
+En 1977 se lanzo Fortran 77 que fue incluyendo mas instruccion como "if", "then", "else", "endif", "do while" y "end do".
+
+Despues de unos años es lanzado Fortran 90 agregando a este modulos, recursividad, nuevos tipos de datos y la escritura de los programas se hace en formato libre. En el 2003 se lanza Fortran 2003 ahora agregando la programacion orientada a objetos.
+
+\subsection{Descripcion del lenguaje}
+
+Como fue una primera tentativa de creación de un lenguaje de programación de alto nivel, tiene una sintaxis considerada arcaica por muchos programadores que aprenden lenguajes más modernos.
+
+Se debe tener en cuenta que la sintaxis de Fortran fue orientada para el uso en trabajos numéricos y científicos. Muchas de sus deficiencias han sido abordadas en revisiones recientes del lenguaje. Por ejemplo, Fortran 95 posee comandos mucho más breves para efectuar operaciones matemáticas con matrices y dispone de tipos. Esto no solo mejora mucho la lectura del programa sino que además aporta información útil al compilador.
+
+Para desarrollar un programa en Fortran, debemos de utilizar un editor de texto, que nos facilitará al momento de escribir, y estos archivos en los que plasmamos código pueden tener la extensión  .f, .f90, .f95, .for dependiendo del compilador o sistema operativo donde se esté trabajando.
+
+\subsubsection{Caracteres permitidos}
+
+El código fuente se escribe utilizando caracteres ASCI(basado en el alfabeto latino):
+
+    • Caracteres alfanuméricos: A-Z, a-z, 0-9.
+    
+    • Otros:= + * / ( ) , "’.: ; ! \& \% <> \$ ?
+    
+    • Espaciamiento: " " "\t" "\n"
+
+\subsubsection{Definicion de variables}
+
+Para definir las  variables deben ser nombradas, utilizando una composición de 1 a 31 caracteres alfanuméricos, siendo el primer carácter una letra.
+
+program Main	! program es una palabra reservada para identificar
+
+! programas principales, Main es el nombre asignado a este programa principal.
+
+Para fortran a y A son lo mismo, no distingue mayúsculas. Las tildes y la ñ solo se pueden incluir en cadenas de caracteres.
+El carácter ! significa que el resto de la línea es comentario y no se toma en cuenta en el proceso de compilación.
+
+<instrucción ! comentario de la instrucción>
+
+El ; separa dos instrucciones sobre la misma línea
+
+	<instrucción; <instrucción; <instrucción>
+	
+El símbolo & es para juntar expresiones como si estas fueran una sola línea 
+
+	<instruccion> \&
+	
+\& <continuacion> \&
+
+\& <continuación>
+
+<otra instrucción>
+
+\subsubsection{Tipos de datos}
+
+Una variable es un objeto que representa un dato de un tipo de dato, susceptible de modificarse y nombrado por una cadena de caracteres, incluıdo el _, de uno a 23 caracteres, sin espacios, que comienza con una letra.
+
+Los tipos de dato básicos en Fortran son los siguientes:
+
+\begin{itemize}
+\item Character: cadenas de uno o varios caracteres.
+\item Integer: números enteros, que pueden tomar todos los valores positivos o negativos entre límites que dependen de la computadora y el compilador.
+\item Logical: valores lógicos o booleanos, que toman solamente uno de los dos valores, .false. (falso) o .true. (verdadero).
+\item Real: números reales que pueden tomar valores positivos o negativos entre límites que dependen de la computadora y el compilador.
+\item Complex: números complejos compuestos de una parte real y una parte imaginaria, ambas partes de tipo real.
+\end{itemize}
+
+La declaración de una variable o más variables del mismo tipo se hace siguiendo la instrucción de especificación
+
+<tipo> [,<atributo(s)>] [::] <variable(s)> [=<valor>]
+
+Los atributos posibles son:
+parameter, save, intent, pointer, target, allocatable, dimension, public, private, external, intrinsic, optional.
+
+\subsubsection{Operaciones básicas}
+
+Cuando se inicializa una variable con un valor dado, este puede ser modificado durante la ejecución del programa, excepto cuando el atributo de declaración es parameter.
+
+Y para las operaciones de suma resta multiplicacion y division seria asi:
+
+\hspace{2cm}integer :: n,m
+
+\hspace{2cm}real :: a,b
+
+\hspace{2cm}real(kind=8) :: x,y
+
+\hspace{2cm}complex :: c
+
+\hspace{2cm}complex(kind=8) :: z
+
+\hspace{2cm}:
+
+\hspace{2cm}a = (x*(n**c))/z
+
+\hspace{2cm}n = a+z
+
+La computadora convierte  a valores del mismo tipo y misma clase de tipo para facilitar los cálculos, el orden es: 
+
+\begin{itemize}
+\item Los enteros son convertidos en reales o complejos.
+\item Los reales son convertidos en complejos
+\item Los reales o complejos son convertidos en la clase (kind) mas alto.
+\item En la asignación de valores (=), la parte derecha es evaluada en el tipo y clase que corresponde, luego es convertida al tipo y clase de la variable del lado izquierdo
+\end{itemize}
+\subsubsection{Operaciones de comparación}
+Para  las operaciones de comparación, la sintaxis sería la siguiente:
+
+\hspace{2cm} <expresión 1> <operador de comparacion> <expression 2>
+
+
+
+
+\subsection{Aplicacion y influencia en lenguajes modernos}
+
+Fortran (Formula Translating System), es uno de los lenguajes de programación más usados en el mundo. Es de los llamados lenguajes imperativos Actualmente el lenguaje FORTRAN es utilizado, por una parte debido a la existencia de numerosas bibliotecas de funciones utilizables en FORTRAN, por otra parte porque existe compiladores FORTRAN potentes que producen ejecutables muy rápidos. No obstante, se reemplaza cada vez más, incluso para aplicaciones científicas, por los lenguajes C y C ++.
+
+\vspace{0.2in}
+
+En 1964 Fortran V fue el nombre originalmente previsto para PL / I , el lenguaje de programación universal de IBM que debía reunir los mejores aspectos de Fortran (para aplicaciones científicas), COBOL (para aplicaciones de gestión), con algunos préstamos en Algol .
+
+\subsubsection{Cobol}
+
+Las siglas COBOL responden a Common Business-Oriented Language, un lenguaje de programación basado en el idioma inglés que lleva más de medio siglo sustentando todo tipo de operaciones, sobre todo en Estados Unidos. Es utilizado por sistemas financieros, compañías de seguros y un gran número de instituciones.COBOL fue diseñado para escribir programas autodocumentados, mediante separación en divisiones para la declaración de variables de los procedimientos y una división para llevar un registro de quién solicitó el programa y quiénes lo escribieron.
+
+\subsubsection{Algol}
+
+Fue desarrollado a finales de los años 1950 por un comité internacional para crear un lenguaje de programación internacional e independiente de la máquina y corregir algunos problemas presentados por Fortran.
+
